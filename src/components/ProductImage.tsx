@@ -1,10 +1,10 @@
 import * as React from 'react';
-import sneakersImg from "../assets/sneakers.png";
+import artWorkImg from "../assets/artwork.png";
 
 const ProductImage: React.FC = () => {
   return(
-    <div className="display-flex justify-center bg-londan-square w-660 h-550 rounded-26">
-      <img src={sneakersImg} alt="shoe" className="align-center" />
+    <div className="display-flex justify-center">
+      <img src={artWorkImg} alt="shoe" className="align-center w-389 h-388" />
     </div>
   );
 }

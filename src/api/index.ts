@@ -1,12 +1,11 @@
 export const TINK_LINK_URL = "https://link.tink.com";
 
-export type PaymentRequest = {
+export type PaymentRequestResponse = {
   amount: number;
   currency: string;
   id: string;
   destinations: PaymentDestinationRequest[];
   market: string;
-  messageType?: string;
   recipientName: string;
   sourceMessage?: string;
 };
@@ -16,8 +15,6 @@ export type PaymentDestinationRequest = {
   reference: string;
   type: string;
 };
-
-
 
 export type PaymentRequestCreatedTransfers = {
   id: string;
@@ -32,10 +29,9 @@ export type PaymentRequestCreatedTransfers = {
   statusMessage: string;
   created: string;
   updated: string;
-
 }
 
-export const createPaymentRequest = async (market: string, currency: string, amount: number): Promise<PaymentRequest> => {
+export const createPaymentRequest = async (market: string, currency: string, amount: number): Promise<PaymentRequestResponse> => {
   const response = await fetch(`/payment-request/${market}/${currency}/${amount}`, {
       method: "POST",
       body: JSON.stringify({ market: market, currency: currency, amount: amount }),
@@ -46,10 +42,9 @@ export const createPaymentRequest = async (market: string, currency: string, amo
 
   const paymentResponse = await response.json();
   return paymentResponse.data;
-
 };
 
-export const getTinkLinkUrl = (
+export const createTinkLinkURL = (
   request_id: string,
 ) => {
   const params = [
@@ -64,7 +59,6 @@ export const getTinkLinkUrl = (
 
   return `${TINK_LINK_URL}/1.0/pay?${params.join("&")}`;
 };
-
 
 export const getPaymentConfirmation = async (requestId: string) => {
   const response = await fetch(`/payment-confirmation/${requestId}`, {

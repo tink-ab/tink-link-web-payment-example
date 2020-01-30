@@ -44,15 +44,6 @@ body {
   background-color:  #F9FAFD;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/*
- 🗡️🗡️ utility first CSS 🗡️🗡️
-*/
-
 .content{
   width: 960px;
   margin: 0 auto;
@@ -62,7 +53,6 @@ code {
 .loto-grotesque {
   font-family: "Lota Grotesque";
 }
-
 
 /* Padding & margin */
 .mb-40 {
@@ -77,8 +67,26 @@ code {
 .mb-30 {
   margin-bottom: 30px;
 }
+.mb-56{
+  margin-bottom: 56px;
+}
+.mb-54{
+  margin-bottom: 54px;
+}
+.mb-77 {
+  margin-bottom: 77px;
+}
+.mb-234{
+  margin-bottom: 234px;
+}
+.mb-128{
+  margin-bottom: 128px;
+}
 .ml-40 {
   margin-left: 40px;
+}
+.ml-58 {
+  margin-left: 58px;
 }
 .ml-20 {
   margin-left: 20px;
@@ -88,6 +96,15 @@ code {
 }
 .mt-20 {
   margin-top: 20px;
+}
+.mt-22{
+  margin-top: 22px;
+}
+.mt-12{
+  margin-top: 12px;
+}
+.mt-21 {
+  margin-top: 21px;
 }
 .mt-30 {
   margin-top: 30px;
@@ -103,6 +120,9 @@ code {
 }
 .mr-35 {
   margin-right: 35px;
+}
+.mr-22 {
+  margin-right: 22px;
 }
 .p-32 {
   padding: 32px;
@@ -120,6 +140,9 @@ code {
 .w-660 {
   width: 660px;
 }
+.w-389{
+  width: 389px;
+}
 .w-350 {
   width: 350px;
 }
@@ -132,9 +155,11 @@ code {
 .w-68 {
   width: 68px;
 }
-
 .h-550 {
   height: 500px;
+}
+.h-388 {
+  height: 388px;
 }
 .h-200 {
   height: 200px;
@@ -145,7 +170,6 @@ code {
 .h-68{
   height: 68px;
 }
-
 
 /* Flex */
 .display-flex{
@@ -184,6 +208,8 @@ code {
   line-height: 24px;
   font-weight: 600;
   padding: 8px 24px;
+  height: 48px;
+  width: 136px;
   outline: 0;
   transition: background-color 0.15s ease;
 }
@@ -194,7 +220,7 @@ code {
 }
 
 /* h1, h2, h3*/
-.header-1 {
+.text-2xl {
   font-size: 24px;
   color: #262626;
   letter-spacing: 0;
@@ -204,7 +230,7 @@ code {
   font-weight: 600;
 }
 
-.heading-2 {
+.text-xl {
   font-size: 18px;
   line-height: 26px;
   font-weight: 600;
@@ -260,7 +286,7 @@ code {
 .bg-londan-square{
   background: #EBF0F1;
 }
-.lighGrey {
+.light-grey {
   color: #808080;
 }
 .matt-black {
@@ -271,7 +297,9 @@ code {
 .paper {
   background: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
-  padding: 25px;
+  padding: 44px 46px 10px 48px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .walking-coin{
@@ -281,14 +309,13 @@ code {
   height: 200px;
 }
 
-
 /* Pretty code */
 .code {
-  background-color: #ebf0f1;
+  background-color: #ECF0F1;
   padding: 12px 16px;
   border-radius: 6px;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-size: 16px;
+  margin-bottom: 48px;
 }
 
 .key {
@@ -299,3 +326,12 @@ code {
   color: #36b472;
 }
 
+.gradient {
+  background-image: linear-gradient(180deg, rgba(249,250,253,0.00) 0%, #F9FAFD 57%,#F9FAFD 100%);
+  height: 152px;
+  z-index: 99;
+  position: absolute;
+  width: 960px;
+  top: 1190px;
+  bottom: 0px;
+}

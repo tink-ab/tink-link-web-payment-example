@@ -26,13 +26,13 @@ export const ConfirmPayment: React.FC<ConfirmPaymentProps> = ({ requestId}) => {
     <>
       <Header/>
       <div className="content">
-        <div className="header-1">Payments Demo</div>
+        <h1 className="text-2xl">Payments Demo</h1>
         <div className="paper">
           <div className="display-flex">
             <div className="ml-16">
-              <div className="heading-2">
+              <h2 className="text-xl">
                 Payment status
-              </div>
+              </h2>
               {!paymentConfirmation && <div>Fetching payment status ...</div>}
               {paymentConfirmation &&
                 paymentConfirmation.map(status => (
@@ -49,6 +49,4 @@ export const ConfirmPayment: React.FC<ConfirmPaymentProps> = ({ requestId}) => {
         <div className="walking-coin ma-auto mt-120 mb-80"></div>
       </div>
     </>);
-
 }
-

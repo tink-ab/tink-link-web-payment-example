@@ -1,10 +1,10 @@
 # Tink Link web payment example
 
-This is an example app showing to initiate payments with Tink Link. This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
+This is an example app showcasing how payments initialisation could be implemented using Tink Link. This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
 
 ## Installation
 
-Running this example application requires `CLIENT_ID` and `CLIENT_SECRET` which you can get by creating a developer account at [Tink Console](https://console.tink.com).
+Running this example application requires `CLIENT_ID` and `CLIENT_SECRET`, retrievable in the [Tink Console](https://console.tink.com) after signing up for a developer account.
 
 ## Running the app locally
 

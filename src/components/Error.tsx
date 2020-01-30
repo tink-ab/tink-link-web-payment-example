@@ -12,10 +12,10 @@ export const Error = ({ error, errorMessage }: ErrorProps) => {
     <>
       <Header />
       <div className="content">
-        <div className="header-1">Error</div>
+        <h1 className="text-2xl">Error</h1>
         <div className="paper">
             <div className="ml-16 mb-40">
-              <div className="heading-2">Tink Link returned with an error</div>
+            <h2 className="text-xl">Tink Link returned with an error</h2>
               <PrettyCode code={error} className="mt-20" />
               {errorMessage && (
                 <>

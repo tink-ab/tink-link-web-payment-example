@@ -4,7 +4,7 @@ const CLIENT_ID = process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_SECRET;
 const API_URL = 'https://api.tink.com/';
 
-const testPaymentDetails = {
+const destinationAccount = {
   destinations: [
     {
       accountNumber: '33008808080808',
@@ -25,7 +25,7 @@ const log = function (...args) {
 
 const getAccessToken = async () => {
   const scopes = 'payment:read,payment:write';
-  const res = await fetch(
+  const response = await fetch(
     `${API_URL}api/v1/oauth/token`,
     {
       method: "POST",
@@ -36,21 +36,24 @@ const getAccessToken = async () => {
     }
   );
 
-  const response = await res.json();
-  log("Create client access token", response);
+  const responseClientToken = await response.json();
 
-  return response.access_token;
+  if (response.status !== 200) {
+    throw Error(`Failed to create payment request: ${response.errorMessage}`);
+  }
+
+  log("Create client access token: ", responseClientToken);
+
+  return responseClientToken.access_token;
 }
 
 const createPaymentRequest = async (clientAccessToken, market, currency, amount) => {
-
   const PaymentRequest = {
-    ...testPaymentDetails,
+    ...destinationAccount,
     currency: currency,
     amount: amount,
     market: market
   };
-
 
   const response = await fetch(
     `${API_URL}api/v1/payments/requests`,
@@ -97,9 +100,6 @@ const getTransferStatus = async (clientAccessToken, requestId) => {
 
   return transferRespons;
 }
-
-
-
 
 module.exports = {
   getAccessToken,
