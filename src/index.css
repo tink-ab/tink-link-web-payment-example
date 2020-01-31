@@ -1,0 +1,314 @@
+:root{
+  --primary: #427783;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-display: optional;
+  font-family: 'Lota Grotesque';
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://tink.com/fonts/lota-regular.woff2') format('woff2'), url('https://tink.com/fonts/lota-regular.woff') format('woff');
+}
+
+@font-face{
+  font-display: optional;
+  font-family: 'Lota Grotesque';
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://tink.com/fonts/lota-semibold.woff2') format('woff2'), url('https://tink.com/fonts/lota-semibold.woff') format('woff');
+}
+
+@font-face{
+  font-display: optional;
+  font-family: 'Lota Grotesque';
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://tink.com/fonts/lota-bold.woff2') format('woff2'), url('lhttps://tink.com/fonts/lota-bold.woff') format('woff');
+}
+
+body{
+  margin: 0;
+  font-family: 'Lota Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:  #F9FAFD;
+}
+
+.content{
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*Fonts*/
+.loto-grotesque{
+  font-family: "Lota Grotesque";
+}
+
+/* Padding & margin */
+.mb-40{
+  margin-bottom: 40px;
+}
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-80{
+  margin-bottom: 80px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.mb-56{
+  margin-bottom: 56px;
+}
+.mb-54{
+  margin-bottom: 54px;
+}
+.mb-77{
+  margin-bottom: 77px;
+}
+.mb-234{
+  margin-bottom: 234px;
+}
+.mb-128{
+  margin-bottom: 128px;
+}
+.ml-58{
+  margin-left: 58px;
+}
+.ml-20{
+  margin-left: 20px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-22{
+  margin-top: 22px;
+}
+.mt-12{
+  margin-top: 12px;
+}
+.mt-21{
+  margin-top: 21px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.mt-120{
+  margin-top: 120px;
+}
+.ml-16{
+  margin-left: 16px;
+}
+.ml-6{
+  margin-left: 6px;
+}
+.mr-22{
+  margin-right: 22px;
+}
+.p-32{
+  padding: 32px;
+}
+.ma-auto{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Width & heights */
+.w-588{
+  width: 588px;
+}
+.w-389{
+  width: 389px;
+}
+.w-350{
+  width: 350px;
+}
+.w-200{
+  width: 200px;
+}
+.w-150{
+  width: 150px;
+}
+.w-68{
+  width: 68px;
+}
+.h-388{
+  height: 388px;
+}
+.h-200{
+  height: 200px;
+}
+.h-10{
+  height: 10px;
+}
+.h-68{
+  height: 68px;
+}
+
+/* Flex */
+.display-flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+.align-center{
+  align-self: center;
+}
+
+/*Links, buttons*/
+.link{
+  text-decoration: none;
+  font-weight: 400;
+}
+.button{
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  background-color: var(--primary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 8px 24px;
+  height: 48px;
+  width: 136px;
+  outline: 0;
+  transition: background-color 0.15s ease;
+}
+.button:hover{
+  background-color: #2d5d67;
+  box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* h1, h2, h3*/
+.text-2xl{
+  font-size: 24px;
+  color: #262626;
+  letter-spacing: 0;
+  line-height: 30.94px;
+  text-align: left;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+.text-xl{
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Font size */
+.text-20{
+  font-size: 20px;
+}
+.text-32{
+  font-size: 32px;
+}
+.text-64{
+  font-size: 64px;
+}
+
+/* letter-spacing */
+.tracking-normal{
+  letter-spacing: 0;
+}
+
+/* font weight*/
+.font-semibold{
+  font-weight: 600;
+}
+
+/* line height*/
+.leading-28{
+  line-height: 28px;
+}
+.leading-40{
+  line-height: 40px;
+}
+
+/* border radius */
+.rounded-15{
+  border-radius: 15px;
+}
+
+/* Colors */
+.bg-white{
+  background-color: #FFFFFF;
+}
+.bg-londan-square{
+  background: #EBF0F1;
+}
+.color-grey{
+  color: #808080;
+}
+.color-black{
+  color: #262626;
+}
+
+/* other */
+.paper{
+  background: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  padding: 44px 46px 10px 48px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.walking-coin{
+  background-image: url("https://cdn.tink.se/example-apps/walking-coin.png");
+  background-size: contain;
+  width: 160px;
+  height: 200px;
+}
+.artwork{
+  background-image: url("https://cdn.tink.se/example-apps/artwork.png");
+  height: 388px;
+  width: 389px;
+  background-size: contain;
+  align-self: center;
+}
+
+/* Pretty code */
+.code{
+  background-color: #ECF0F1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+.key{
+  color: #427783;
+}
+.string{
+  color: #36b472;
+}
+.gradient{
+  background-image: linear-gradient(180deg, rgba(249,250,253,0.00) 0%, #F9FAFD 57%,#F9FAFD 100%);
+  height: 152px;
+  z-index: 99;
+  position: absolute;
+  width: 960px;
+  top: 1190px;
+  bottom: 0px;
+}
