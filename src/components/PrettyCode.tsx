@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from "react";
 
 // Inspired by http://jsfiddle.net/KJQ9K/554/
 const syntaxHighlight = (json: string) => {

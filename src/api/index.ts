@@ -18,16 +18,16 @@ export type PaymentDestinationRequest = {
 
 export type PaymentRequestCreatedTransfers = {
   id: string;
-  destination: PaymentDestinationRequest;
   amount: number;
+  created: string;
   currency: string;
+  destination: PaymentDestinationRequest;
   market: string;
+  providerName: string;
   recipientName: string;
   sourceMessage: string;
-  providerName: string;
   status: string;
   statusMessage: string;
-  created: string;
   updated: string;
 }
 

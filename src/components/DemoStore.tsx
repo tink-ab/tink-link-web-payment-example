@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from "react";
 
 import Header from "./Header";
 import ProductImage from "./ProductImage";
@@ -37,7 +37,9 @@ const Demostore: React.FC = () => {
   const getPaymentRequest = async () => {
     const paymentResponse = await createPaymentRequest(market, currency, amount);
     const payementRequestId = paymentResponse.id;
-
+    /* We redirect from our application to tink.link.com, once the flow is
+       completed inside. We will get redirected back to the redirect_uri
+       that we have specified. */
     window.location.href = createTinkLinkURL(payementRequestId);
  }
 
@@ -56,9 +58,9 @@ const Demostore: React.FC = () => {
           <div className="display-flex mb-77">
             <ProductImage/>
             <div className="bg-white ml-58 display-flex flex-column justify-center w-588">
-              <span className="text-20 tracking-normal leading-28 light-grey font-semibold">{model}</span>
-              <p className="text-64 matt-black font-semibold tracking-normal mb-56">{name}</p>
-              <span className="text-32 leading-40 matt-black font-semibold tracking-normal">{amount} kr</span>
+              <span className="text-20 tracking-normal leading-28 color-grey font-semibold">{model}</span>
+              <p className="text-64 color-black font-semibold tracking-normal mb-56">{name}</p>
+              <span className="text-32 leading-40 color-black font-semibold tracking-normal">{amount} kr</span>
               <button
                 className="button mt-21"
                 onClick={() => getPaymentRequest()}

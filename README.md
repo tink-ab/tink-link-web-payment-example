@@ -1,6 +1,6 @@
 # Tink Link web payment example
 
-This is an example app showcasing how payments initialisation could be implemented using Tink Link. This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
+This is an example app implementing payments initialisation using Tink Link. This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
 
 ## Installation
 

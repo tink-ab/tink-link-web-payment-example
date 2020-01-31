@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from "react";
 import artWorkImg from "../assets/artwork.png";
 
 const ProductImage: React.FC = () => {
