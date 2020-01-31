@@ -38,7 +38,7 @@ const Demostore: React.FC = () => {
     const paymentResponse = await createPaymentRequest(market, currency, amount);
     const payementRequestId = paymentResponse.id;
     /* We redirect from our application to tink.link.com, once the flow is
-       completed inside. We will get redirected back to the redirect_uri
+       completed on, we will get redirected back to the redirect_uri
        that we have specified. */
     window.location.href = createTinkLinkURL(payementRequestId);
  }

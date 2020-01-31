@@ -25,7 +25,7 @@ export type PaymentRequestCreatedTransfers = {
   market: string;
   providerName: string;
   recipientName: string;
-  sourceMessage: string;
+  sourceMessage?: string;
   status: string;
   statusMessage: string;
   updated: string;

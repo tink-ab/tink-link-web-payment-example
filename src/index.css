@@ -276,10 +276,17 @@ body{
   border-top-left-radius: 3px;
 }
 .walking-coin{
-  background-image: url("./assets/walking-coin.png");
+  background-image: url("https://cdn.tink.se/example-apps/walking-coin.png");
   background-size: contain;
   width: 160px;
   height: 200px;
+}
+.artwork{
+  background-image: url("https://cdn.tink.se/example-apps/artwork.png");
+  height: 388px;
+  width: 389px;
+  background-size: contain;
+  align-self: center;
 }
 
 /* Pretty code */
