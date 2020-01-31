@@ -12,14 +12,14 @@ export type PaymentRequestResponse = {
 
 export type PaymentDestinationRequest = {
   accountNumber: string;
-  reference: string;
+  reference?: string;
   type: string;
 };
 
 export type PaymentRequestCreatedTransfers = {
   id: string;
   amount: number;
-  created: string;
+  created?: string;
   currency: string;
   destination: PaymentDestinationRequest;
   market: string;
@@ -28,7 +28,7 @@ export type PaymentRequestCreatedTransfers = {
   sourceMessage?: string;
   status: string;
   statusMessage: string;
-  updated: string;
+  updated?: string;
 }
 
 export const createPaymentRequest = async (market: string, currency: string, amount: number): Promise<PaymentRequestResponse> => {
