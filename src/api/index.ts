@@ -1,4 +1,4 @@
-export const TINK_LINK_URL = "https://link.tink.com";
+export const TINK_LINK_URL = 'https://link.tink.com';
 
 export type PaymentRequestResponse = {
   amount: number;
@@ -29,46 +29,48 @@ export type PaymentRequestCreatedTransfers = {
   status: string;
   statusMessage: string;
   updated?: string;
-}
+};
 
-export const createPaymentRequest = async (market: string, currency: string, amount: number): Promise<PaymentRequestResponse> => {
+export const createPaymentRequest = async (
+  market: string,
+  currency: string,
+  amount: number
+): Promise<PaymentRequestResponse> => {
   const response = await fetch(`/payment-request/${market}/${currency}/${amount}`, {
-      method: "POST",
-      body: JSON.stringify({ market: market, currency: currency, amount: amount }),
-      headers: {
-        "Content-Type": "application/json"
-      }
+    method: 'POST',
+    body: JSON.stringify({ market: market, currency: currency, amount: amount }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 
   const paymentResponse = await response.json();
   return paymentResponse.data;
 };
 
-export const createTinkLinkURL = (
-  request_id: string,
-) => {
+export const createTinkLinkURL = (request_id: string) => {
   const params = [
     `client_id=${process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID}`,
-    "redirect_uri=http://localhost:3000/callback",
-    "scope=user:read,credentials:read",
-    "market=SE",
-    "locale=en_US",
+    'redirect_uri=http://localhost:3000/callback',
+    'scope=user:read,credentials:read',
+    'market=SE',
+    'locale=en_US',
     `payment_request_id=${request_id}`,
-    "test=true"
+    'test=true',
   ];
 
-  return `${TINK_LINK_URL}/1.0/pay?${params.join("&")}`;
+  return `${TINK_LINK_URL}/1.0/pay?${params.join('&')}`;
 };
 
 export const getPaymentConfirmation = async (requestId: string) => {
   const response = await fetch(`/payment-confirmation/${requestId}`, {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify({ request_id: requestId }),
     headers: {
-      "Content-Type": "application/json"
-    }
+      'Content-Type': 'application/json',
+    },
   });
 
   const paymentConfirmationResponse = await response.json();
   return paymentConfirmationResponse.data;
-}
+};

@@ -1,5 +1,6 @@
 ![Platform](https://img.shields.io/badge/platform-web-blue.svg)
 ![Languages](https://img.shields.io/badge/languages-js-brightgreen.svg)
+
 # Tink Link web payment example
 
 This is an example app implementing payments initialisation using Tink Link. This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
