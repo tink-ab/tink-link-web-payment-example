@@ -33,15 +33,16 @@ const getAccessToken = async () => {
     body: `client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&grant_type=client_credentials&scope=${scopes}`,
   });
 
-  const responseClientToken = await response.json();
+  const clientTokenResponse = await response.json();
 
   if (response.status !== 200) {
-    throw Error(`Failed to create payment request: ${response.errorMessage}`);
+    log('Failed to create access token', response);
+    throw Error();
   }
 
-  log('Create client access token: ', responseClientToken);
+  log('Client access token response', clientTokenResponse);
 
-  return responseClientToken.access_token;
+  return clientTokenResponse.access_token;
 };
 
 const createPaymentRequest = async (clientAccessToken, market, currency, amount) => {
@@ -61,15 +62,16 @@ const createPaymentRequest = async (clientAccessToken, market, currency, amount)
     body: JSON.stringify(PaymentRequest),
   });
 
-  const paymentResponse = await response.json();
+  const paymentRequestResponse = await response.json();
 
   if (response.status !== 200) {
-    throw Error(`Failed to create payment request: ${paymentResponse.errorMessage}`);
+    log('Failed to create payment request', response);
+    throw Error();
   }
 
-  log('Payment response: ', paymentResponse);
+  log('Payment request response', paymentRequestResponse);
 
-  return paymentResponse;
+  return paymentRequestResponse;
 };
 
 const getTransferStatus = async (clientAccessToken, requestId) => {
@@ -81,15 +83,16 @@ const getTransferStatus = async (clientAccessToken, requestId) => {
     },
   });
 
-  const transferRespons = await response.json();
+  const transferResponse = await response.json();
 
   if (response.status !== 200) {
-    throw Error(`Failed to create payment request: ${response.errorMessage}`);
+    log('Failed to fetch transfer status', response);
+    throw Error();
   }
 
-  log('Payment confirmation response: ', transferRespons);
+  log('Fetch transfer status response', transferResponse);
 
-  return transferRespons;
+  return transferResponse;
 };
 
 module.exports = {
