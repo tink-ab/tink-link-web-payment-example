@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 const CLIENT_ID = process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID;
-const CLIENT_SECRET = process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_SECRET;
+const CLIENT_SECRET = process.env.TINK_LINK_PAYMENT_CLIENT_SECRET;
 const API_URL = 'https://api.tink.com/';
 
 const destinationAccount = {

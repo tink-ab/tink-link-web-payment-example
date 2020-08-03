@@ -11,8 +11,8 @@ if (!process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID) {
   throw Error('Environment variable `REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID` is not set.');
 }
 
-if (!process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_SECRET) {
-  throw Error('Environment variable `REACT_APP_TINK_LINK_PAYMENT_CLIENT_SECRET` is not set.');
+if (!process.env.TINK_LINK_PAYMENT_CLIENT_SECRET) {
+  throw Error('Environment variable `TINK_LINK_PAYMENT_CLIENT_SECRET` is not set.');
 }
 
 app.post('/payment-request/:market/:currency/:amount', async (req, res) => {
