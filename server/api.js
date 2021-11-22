@@ -9,9 +9,12 @@ const destinationAccount = {
     {
       accountNumber: '33008808080808',
       type: 'se',
-      reference: '3245928392092',
     },
   ],
+  remittanceInformation: {
+    type: 'UNSTRUCTURED',
+    value: '3245928392092',
+  },
   recipientName: 'Demo Store AB',
   sourceMessage: 'Payment for Sneaker 034',
 };
