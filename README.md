@@ -24,6 +24,8 @@ export REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID='<YOUR_CLIENT_ID>'
 export TINK_LINK_PAYMENT_CLIENT_SECRET='<YOUR_CLIENT_SECRET>'
 ```
 
+(Alternatively, this can be done using the .env file found in the root of this project)
+
 3. Run client and server in terminal separately
 
 ```
