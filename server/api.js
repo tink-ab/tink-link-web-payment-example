@@ -15,6 +15,10 @@ const destinationAccount = {
   ],
   recipientName: 'Demo Store AB',
   sourceMessage: 'Payment for Sneaker 034',
+  remittanceInformation: {
+    type: "UNSTRUCTURED",
+    value: "3245928392092"
+  },
 };
 
 const log = function (...args) {
