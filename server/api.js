@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+require('dotenv').config()
 
 const CLIENT_ID = process.env.REACT_APP_TINK_LINK_PAYMENT_CLIENT_ID;
 const CLIENT_SECRET = process.env.TINK_LINK_PAYMENT_CLIENT_SECRET;
