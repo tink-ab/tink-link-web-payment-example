@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "description": "Automatically merge all updates",
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
+}
